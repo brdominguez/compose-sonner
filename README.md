@@ -1,19 +1,20 @@
 <div align="center">
   <img src="./images/banner.png"  alt="Compose Sonner"/>
   <h1>Compose Sonner</h1>
-  <img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.dokar3/sonner?style=flat-square&color=%23335AE7">
-  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/dokar3/compose-sonner/build.yaml?style=flat-square">
+  <img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.brdominguez/sonner?style=flat-square&color=%23335AE7">
+  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/brdominguez/compose-sonner/build.yaml?style=flat-square">
 </div>
 
 > An opinionated toast component for Compose Multiplatform.
 
 This is a Compose implementation of [sonner](https://github.com/emilkowalski/sonner) - an excellent toast library by [emilkowalski](https://github.com/emilkowalski).
+This is a fork of [dokar3/compose-sonner](https://github.com/dokar3/compose-sonner) with modifications by [brdominguez](https://github.com/brdominguez). Original project licensed under Apache 2.0.
 
 ### Demo
 
 WasmJs Demo
 
-[https://dokar3.github.io/compose-sonner/](https://dokar3.github.io/compose-sonner/)
+[https://brdominguez.github.io/compose-sonner/](https://dokar3.github.io/compose-sonner/)
 
 Video
 
@@ -47,13 +48,13 @@ https://github.com/dokar3/compose-sonner/assets/68095777/ff97c6cc-012e-4152-8c40
 build.gradle(.kts)
 
 ```kotlin
-implementation("io.github.dokar3:sonner:<VERSION>")
+implementation("io.github.brdominguez:sonner:<VERSION>")
 ```
 
 libs.versions.toml
 
 ```toml
-sonner = { module = "io.github.dokar3:sonner", version = "<VERSION>" }
+sonner = { module = "io.github.brdominguez:sonner", version = "<VERSION>" }
 ```
 
 ### Basic
@@ -254,6 +255,7 @@ fun YourScreen(...) {
 # License
 
 ```
+Modifications Copyright 2025 brdominguez
 Copyright 2024 dokar3
 
 Licensed under the Apache License, Version 2.0 (the "License");
