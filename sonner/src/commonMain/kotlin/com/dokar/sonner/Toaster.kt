@@ -22,7 +22,10 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.runtime.Composable
@@ -116,7 +119,7 @@ fun Toaster(
     } else {
         ToasterDefaults.ShadowSpotColor
     },
-    containerPadding: PaddingValues = PaddingValues(0.dp),
+    containerPadding: PaddingValues = WindowInsets.navigationBars.asPaddingValues(),
     contentPadding: @Composable (toast: Toast) -> PaddingValues = { PaddingValues(16.dp) },
     widthPolicy: @Composable (toast: Toast) -> ToastWidthPolicy = { ToastWidthPolicy() },
     alignment: Alignment = Alignment.BottomCenter,
@@ -149,7 +152,6 @@ fun Toaster(
             indexOfKey = { key -> state.toasts.indexOfFirst { it.toast.id == key } },
             isItemDismissed = { index -> state.toasts[index].isDismissed }
         )
-
 
         val itemHeightProvider = remember { ItemHeightProvider() }
 
