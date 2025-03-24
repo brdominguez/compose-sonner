@@ -14,7 +14,7 @@ This is a fork of [dokar3/compose-sonner](https://github.com/dokar3/compose-sonn
 
 WasmJs Demo
 
-[https://brdominguez.github.io/compose-sonner/](https://dokar3.github.io/compose-sonner/)
+[https://brdominguez.github.io/compose-sonner/](https://brdominguez.github.io/compose-sonner/)
 
 Video
 
