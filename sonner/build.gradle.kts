@@ -1,5 +1,7 @@
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Base64
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -7,15 +9,51 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.mavenPublish)
     alias(libs.plugins.compose.compiler)
+    id("signing")
 }
 
-pom {
-    // https://github.com/vanniktech/gradle-maven-publish-plugin/issues/802
-    withXml {
-        val repo = asNode().appendNode("repositories").appendNode("repository")
-        repo.appendNode("name", "Google")
-        repo.appendNode("id", "google")
-        repo.appendNode("url", " https://maven.google.com/")
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    signAllPublications()
+
+    coordinates(
+        groupId = "io.github.brdominguez",
+        artifactId = "compose-sonner",
+        version = "0.3.10"
+    )
+
+    pom {
+        name.set("compose-sonner")
+        description.set("An opinionated toast component for Compose Multiplatform.")
+        inceptionYear.set("2025")
+        url.set("https://github.com/brdominguez/compose-sonner")
+        licenses {
+            license {
+                name.set("The Apache Software License, Version 2.0")
+                url.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
+                distribution.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
+            }
+        }
+        developers {
+            developer {
+                id.set("brdominguez")
+                name.set("Bryan Dominguez")
+                url.set("https://github.com/brdominguez/")
+            }
+        }
+        scm {
+            url.set("https://github.com/brdominguez/compose-sonner")
+            connection.set("scm:git:git://github.com/brdominguez/compose-sonner.git")
+            developerConnection.set("scm:git:ssh://git@github.com/brdominguez/compose-sonner.git")
+        }
+
+        // https://github.com/vanniktech/gradle-maven-publish-plugin/issues/802
+        withXml {
+            val repo = asNode().appendNode("repositories").appendNode("repository")
+            repo.appendNode("name", "Google")
+            repo.appendNode("id", "google")
+            repo.appendNode("url", " https://maven.google.com/")
+        }
     }
 }
 
