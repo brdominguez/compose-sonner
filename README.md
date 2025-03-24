@@ -48,13 +48,13 @@ https://github.com/dokar3/compose-sonner/assets/68095777/ff97c6cc-012e-4152-8c40
 build.gradle(.kts)
 
 ```kotlin
-implementation("io.github.brdominguez:sonner:<VERSION>")
+implementation("io.github.brdominguez:compose-sonner:<VERSION>")
 ```
 
 libs.versions.toml
 
 ```toml
-sonner = { module = "io.github.brdominguez:sonner", version = "<VERSION>" }
+sonner = { module = "io.github.brdominguez:compose-sonner", version = "<VERSION>" }
 ```
 
 ### Basic
