@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./images/banner.png"  alt="Compose Sonner"/>
   <h1>Compose Sonner</h1>
-  <img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.brdominguez/sonner?style=flat-square&color=%23335AE7">
+  <img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.brdominguez/compose-sonner?style=flat-square&color=%23335AE7">
   <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/brdominguez/compose-sonner/build.yaml?style=flat-square">
 </div>
 
