@@ -87,7 +87,7 @@ jobs:
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
     - if: matrix.build-mode == 'manual'
-      uses: ./.github/workflows/build.yaml
+      uses: .github/workflows/build.yaml
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
