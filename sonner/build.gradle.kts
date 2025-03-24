@@ -9,6 +9,16 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
+pom {
+    // https://github.com/vanniktech/gradle-maven-publish-plugin/issues/802
+    withXml {
+        val repo = asNode().appendNode("repositories").appendNode("repository")
+        repo.appendNode("name", "Google")
+        repo.appendNode("id", "google")
+        repo.appendNode("url", " https://maven.google.com/")
+    }
+}
+
 kotlin {
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
