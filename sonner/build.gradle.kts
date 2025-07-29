@@ -19,7 +19,7 @@ mavenPublishing {
     coordinates(
         groupId = "io.github.brdominguez",
         artifactId = "compose-sonner",
-        version = "0.3.10"
+        version = "0.4.0"
     )
 
     pom {
